@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ℂ𝕆ℝ𝕍𝕌𝕊 · admin</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="dark">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<canvas id="dust" aria-hidden="true"></canvas>
+<div class="nebula" aria-hidden="true"></div>
+
+<main class="shell shell--admin">
+
+  <header class="hero">
+    <h1 class="brand brand--sm">ℂ𝕆ℝ𝕍𝕌𝕊</h1>
+    <p class="tagline">لوحة الإدارة</p>
+  </header>
+
+  <!-- login -->
+  <section class="panel" id="login-view">
+    <form id="login-form" novalidate>
+      <label class="sr-only" for="password">كلمة المرور</label>
+      <input type="password" id="password" placeholder="كلمة المرور" autocomplete="current-password" required>
+      <button type="submit">دخول</button>
+      <p class="notice" id="login-notice" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- questions -->
+  <section class="admin hidden" id="admin-view">
+    <div class="admin__bar">
+      <span class="admin__count" id="count"></span>
+      <button type="button" class="ghost" id="refresh">تحديث</button>
+      <button type="button" class="ghost" id="logout">خروج</button>
+    </div>
+
+    <div id="list" class="list"></div>
+    <p class="empty" id="admin-empty">لا توجد أسئلة.</p>
+  </section>
+
+  <footer class="foot"><span>ℂ𝕆ℝ𝕍𝕌𝕊</span></footer>
+</main>
+
+<script src="config.js"></script>
+<script src="store.js"></script>
+<script src="dust.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

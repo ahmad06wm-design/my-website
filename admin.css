@@ -1,0 +1,160 @@
+/* ℂ𝕆ℝ𝕍𝕌𝕊 — admin */
+
+.shell--admin { width: min(760px, 100% - 2.5rem); }
+
+.brand--sm {
+  font-size: clamp(1.7rem, 6vw, 2.2rem);
+  letter-spacing: .24em;
+  text-indent: .24em;
+}
+
+.panel {
+  margin-top: clamp(2rem, 6vh, 3rem);
+  padding: 1.6rem;
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+}
+
+.panel input {
+  width: 100%;
+  padding: .9rem 1.1rem;
+  font: inherit;
+  color: var(--ink);
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+.panel input:focus {
+  outline: none;
+  border-color: rgba(110, 231, 255, 0.45);
+  box-shadow: 0 0 0 4px rgba(110, 231, 255, 0.1);
+}
+
+.hidden { display: none !important; }
+
+.admin { margin-top: clamp(2rem, 6vh, 3rem); }
+
+.admin__bar {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: 1.2rem;
+}
+
+.admin__count {
+  margin-inline-end: auto;
+  font-size: .85rem;
+  letter-spacing: .1em;
+  color: var(--muted);
+}
+
+button.ghost {
+  width: auto;
+  margin: 0;
+  padding: .5rem 1.1rem;
+  font-size: .88rem;
+  background: var(--glass);
+}
+
+button.ghost:hover {
+  background: var(--glass-strong);
+  transform: none;
+  box-shadow: 0 0 20px rgba(123, 92, 255, 0.35);
+}
+
+.list { display: grid; gap: 1.1rem; }
+
+.item {
+  padding: 1.25rem 1.35rem;
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+  transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+.item:hover { border-color: rgba(140, 200, 255, 0.25); }
+
+.item__meta {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-size: .75rem;
+  letter-spacing: .12em;
+  color: var(--muted);
+  margin-bottom: .7rem;
+}
+
+.badge {
+  padding: .12rem .6rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.badge--new { color: #ffd9a8; border-color: rgba(255, 217, 168, 0.35); }
+.badge--done { color: #8ff0d0; border-color: rgba(143, 240, 208, 0.35); }
+
+.item__q {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--ink);
+}
+
+.item__answer {
+  margin: .8rem 0 0;
+  padding: .8rem 1rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: .95rem;
+  color: #cfd6ff;
+  background: rgba(123, 92, 255, 0.12);
+  border-inline-start: 2px solid rgba(150, 170, 255, 0.5);
+  border-radius: 10px;
+}
+
+.item textarea {
+  min-height: 96px;
+  margin-top: .9rem;
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.item__actions {
+  display: flex;
+  gap: .6rem;
+  margin-top: .9rem;
+  flex-wrap: wrap;
+}
+
+.item__actions button {
+  width: auto;
+  margin: 0;
+  padding: .55rem 1.3rem;
+  font-size: .9rem;
+}
+
+.item__actions .danger {
+  background: rgba(255, 90, 120, 0.16);
+  border-color: rgba(255, 120, 150, 0.35);
+}
+
+.item__actions .danger:hover {
+  background: rgba(255, 90, 120, 0.3);
+  box-shadow: 0 0 24px rgba(255, 90, 120, 0.28);
+}
+
+.item .notice { text-align: start; }
+
+@media (max-width: 520px) {
+  .shell--admin { width: min(760px, 100% - 1.5rem); }
+}
